@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shortlisted Payment File</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0; background:#e9e9e9; font-family:Inter, Arial, sans-serif}
+ .page{max-width:1100px; margin:24px auto; background:#fff; padding:42px 36px; box-shadow:0 10px 30px rgba(0,0,0,.08)}
+ .head{text-align:center; border-bottom:2px solid #D4AF37; padding-bottom:18px}
+  h1{margin:14px 0 0; color:#0A1931; font-size:30px; letter-spacing:.5px}
+ .meta{display:flex; justify-content:space-between; font-size:12px; color:#444; margin:18px 0 10px}
+  table{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:10px}
+  th{background:#C69C3A; color:#fff; padding:11px 6px; text-align:left; font-weight:700}
+  td{border:1px solid #d8d8d8; padding:11px 6px; height:24px}
+  tr:nth-child(even) td{background:#fdf7e6}
+  td[contenteditable]{outline:none}
+  td[contenteditable]:focus{background:#fff3c4}
+ .foot{margin-top:26px; border-top:1px solid #D4AF37; padding-top:12px; font-size:11px; color:#555; line-height:1.5}
+ .print{margin-top:22px; background:#0A1931; color:#fff; border:0; padding:13px 28px; border-radius:6px; cursor:pointer; font-weight:600}
+  @media print{body{background:#fff}.page{box-shadow:none; margin:0; padding:20px}.print{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <!-- SHARPEST VECTOR LOGO - 100% crisp, no image file needed -->
+    <svg width="130" height="130" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto">
+      <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FBEA9A"/><stop offset="50%" stop-color="#C69C3A"/><stop offset="100%" stop-color="#8B6A1E"/></linearGradient></defs>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="url(#g)" stroke-width="7"/>
+      <path d="M100 28 L100 28" stroke="url(#g)" stroke-width="0"/>
+      <!-- inner network -->
+      <g fill="url(#g)" stroke="url(#g)" stroke-width="2">
+        <polygon points="100,22 113,30 113,46 100,54 87,46 87,30"/>
+        <polygon points="33,64 46,56 59,64 59,80 46,88 33,80"/>
+        <polygon points="141,64 154,56 167,64 167,80 154,88 141,80"/>
+        <polygon points="33,136 46,128 59,136 59,152 46,160 33,152"/>
+        <polygon points="141,136 154,128 167,136 167,152 154,160 141,152"/>
+        <polygon points="100,162 113,170 113,186 100,194 87,186 87,170"/>
+        <path d="M100 54 Q70 70 59 80" fill="none" stroke-width="4"/>
+        <path d="M100 54 Q130 70 141 80" fill="none" stroke-width="4"/>
+        <path d="M46 88 Q40 114 46 128" fill="none" stroke-width="4"/>
+        <path d="M154 88 Q160 114 154 128" fill="none" stroke-width="4"/>
+        <path d="M59 152 Q80 170 87 170" fill="none" stroke-width="4"/>
+        <path d="M141 152 Q120 170 113 170" fill="none" stroke-width="4"/>
+      </g>
+      <!-- Dollar -->
+      <text x="100" y="128" text-anchor="middle" font-family="Arial Black, Arial" font-size="90" font-weight="900" fill="url(#g)">$</text>
+      <rect x="82" y="55" width="9" height="90" fill="url(#g)"/>
+      <rect x="109" y="55" width="9" height="90" fill="url(#g)"/>
+    </svg>
+    <h1>Shortlisted Payment File</h1>
+  </div>
+
+  <div class="meta">
+    <span>DOCUMENT NO.: <b>SPF-2026-0010</b></span>
+    <span>DATE: <b>24 SEPTEMBER 2026</b></span>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>S/N</th><th>Names</th><th>Where Person From (Country)</th><th>Details</th><th>Accounts</th><th>Add</th><th>Remove</th><th>Balance</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>2</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>3</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>4</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>5</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>6</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>7</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>8</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>9</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>10</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="foot">
+    <b>Prepared by Admin</b><br>
+    This is a system-generated shortlisted payment file. Where Person From (Country) column na you go fill. All information is subject to verification prior to processing.<br>
+    Page 1 of 1 · Confidential · Printed: 24/09/2026 09:00 AM — © 2026 Finance Operations
+  </div>
+
+  <button class="print" onclick="window.print()">Print / Save as PDF</button>
+</div>
+</body>
+</html>
