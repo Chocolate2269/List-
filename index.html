@@ -1,71 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Receipt - Instant Support</title>
-<style>
- body{margin:0; background:#d0d0d0; font-family:Arial}
-.receipt{max-width:680px; margin:20px auto; background:#fff; padding:30px; border-top:8px solid #C69C3A; box-shadow:0 12px 30px rgba(0,0,0,.2)}
-.head{text-align:center; border-bottom:2px dashed #999; padding-bottom:12px}
- h2{margin:8px 0 0; color:#0A1931}
-.platform{background:#fdf3d0; padding:10px; border:1px solid #e0c36a; text-align:center; margin-top:10px; font-size:13px}
- table{width:100%; border-collapse:collapse; font-size:13px; margin-top:14px}
- th{background:#C69C3A; color:#fff; padding:10px 6px; text-align:left}
- td{border:1px solid #ccc; padding:10px 6px}
- td[contenteditable]{background:#fffef0}
- td[contenteditable]:focus{background:#ffe78a; outline:none}
-.total{text-align:right; font-weight:800; margin-top:14px; border-top:2px solid #000; padding-top:10px}
-.btns{margin-top:16px; display:flex; gap:8px; flex-wrap:wrap}
-.btn{padding:11px 16px; border:0; border-radius:5px; cursor:pointer; font-weight:700}
-.print{background:#0A1931; color:#fff}.add{background:#1e8e3e; color:#fff}.clear{background:#666; color:#fff}
- @media print{.btns{display:none} body{background:#fff}.receipt{box-shadow:none}}
-</style>
-</head>
-<body>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Receipt</title>
+<style>body{margin:0;background:#d0d0d0;font-family:Arial}.receipt{max-width:700px;margin:20px auto;background:#fff;padding:30px;border-top:8px solid #C69C3A}table{width:100%;border-collapse:collapse;font-size:13px;margin-top:14px}th{background:#0A1931;color:#fff;padding:11px 6px;text-align:left}td{border:1px solid #ccc;padding:11px 6px}td[contenteditable]{background:#fffef0}td[contenteditable]:focus{background:#ffe78a;outline:none}.total{margin-top:15px;background:#0A1931;color:#fff;padding:12px;text-align:right;font-weight:900}</style></head><body>
 <div class="receipt">
-  <div class="head">
-    <svg width="75" height="75" viewBox="0 0 200 200" style="margin:auto; display:block"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FBEA9A"/><stop offset="100%" stop-color="#8B6A1E"/></linearGradient></defs><circle cx="100" cy="100" r="88" fill="none" stroke="url(#g)" stroke-width="8"/><text x="100" y="132" text-anchor="middle" font-size="80" font-weight="900" fill="url(#g)">$</text></svg>
-    <h2>PAYMENT RECEIPT</h2>
-  </div>
-  <div class="platform">Platform: <b contenteditable="true">BINANCE</b> | Receipt: <b contenteditable="true">SPF-2026-0010</b> | Date: <b contenteditable="true">24 SEPT 2026</b></div>
-  <table id="t">
-    <tr><th>#</th><th>Names</th><th>Country</th><th>Amount ($)</th></tr>
-    <tr><td>1</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-    <tr><td>2</td><td contenteditable="true"></td></tr>
-    <tr><td>3</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-    <tr><td>4</td><td contenteditable="true"></td></tr>
-    <tr><td>5</td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
-  </table>
-  <div class="total">Total: $ <span contenteditable="true">0.00</span></div>
-  <div class="btns">
-    <button class="btn add" onclick="let tbl=document.getElementById('t'); let n=tbl.rows.length; let r=tbl.insertRow(); r.innerHTML=`<td>${n}</td><td contenteditable='true'></td>`">+ Add</button>
-    <button class="btn clear" onclick="if(confirm('Clear?')) document.querySelectorAll('td[contenteditable]').forEach(e=>e.innerText='')">Clear</button>
-    <button class="btn print" onclick="window.print()">Print / PDF</button>
-  </div>
+<h2 style="text-align:center">PAYMENT RECEIPT - Amount To Receive</h2>
+<p style="text-align:center;background:#fdf3d0;padding:8px">Platform: <b contenteditable="true">BINANCE</b> | Receipt: <b contenteditable="true">SPF-2026-0010</b></p>
+<table id="t"><tr><th>#</th><th>Names</th><th>Country</th><th>Amount To Receive ($)</th></tr>
+<tr><td>1</td><td contenteditable="true"></td><td contenteditable="true">$ 0.00</td></tr>
+<tr><td>2</td><td contenteditable="true"></td><td contenteditable="true">$ 0.00</td></tr>
+<tr><td>3</td><td contenteditable="true"></td><td contenteditable="true">$ 0.00</td></tr>
+<tr><td>4</td><td contenteditable="true"></td><td contenteditable="true">$ 0.00</td></tr>
+<tr><td>5</td><td contenteditable="true"></td><td contenteditable="true">$ 0.00</td></tr>
+</table>
+<div class="total">TOTAL AMOUNT TO RECEIVE: $ <span contenteditable="true">0.00</span></div>
+<br><button onclick="window.print()" style="padding:10px 18px;background:#0A1931;color:#fff;border:0;border-radius:5px">Print / PDF</button>
 </div>
 
-<!-- Chatway Widget -->
 <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=PuuL5XeirbvW"></script>
-
-<!-- INSTANT POPPING SUPPORT -->
 <script>
-window.addEventListener('load', function(){
-  setTimeout(function(){
-    // Try to auto-open Chatway chat
-    if(window.Chatway && window.Chatway.show) window.Chatway.show();
-    if(window.chatway && window.chatway.open) window.chatway.open();
-    // Force click the widget button if present
-    let btn = document.querySelector('[id*="chatway"] iframe,.chatway--button, #chatway-widget');
-    if(btn) btn.click();
-  }, 2000); // pop after 2 seconds
-});
-
-// Pop again after 15 seconds if user never chatted
-setTimeout(function(){
+function forceChatwayOpen(){
   if(window.Chatway && window.Chatway.show) window.Chatway.show();
-}, 15000);
+  document.querySelectorAll('div,button,iframe').forEach(el=>{
+    if(el.id && el.id.toLowerCase().includes('chatway')) el.click();
+    if(el.className && el.className.toString().toLowerCase().includes('chatway')) el.click();
+  });
+}
+window.addEventListener('load',()=>{
+  setTimeout(forceChatwayOpen,1500);
+  setTimeout(forceChatwayOpen,3000);
+  let c=0; let iv=setInterval(()=>{forceChatwayOpen(); c++; if(c>10) clearInterval(iv);},1000);
+});
 </script>
-
-</body>
-</html>
+</body></html>
